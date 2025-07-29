@@ -1,0 +1,22 @@
+{
+  "name": "mock-chatbot",
+  "version": "1.0.0",
+  "description": "A mock chatbot with React/TypeScript frontend and FastAPI backend",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && uv run uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && uv sync",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm run start",
+    "backend:install": "cd backend && uv sync",
+    "backend:add": "cd backend && uv add",
+    "backend:run": "cd backend && uv run"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["react", "typescript", "fastapi", "python", "chatbot"],
+  "author": "",
+  "license": "MIT"
+}
