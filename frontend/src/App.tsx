@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import StripePayment from './components/StripePayment'
 
 interface Message {
   id: string
@@ -131,6 +132,8 @@ function App() {
               </button>
             </div>
           </div>
+
+          <StripePayment amount={1000} />
         </div>
       </div>
     </div>
